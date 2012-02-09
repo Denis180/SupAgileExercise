@@ -17,3 +17,6 @@ def List(request):
 		"viandes"	: viandes,
 		"desserts"	: desserts
 	},context_instance=RequestContext(request))
+
+def Contact(request):
+	return render_to_response('Front/Contact.html',{},context_instance=RequestContext(request))
