@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Menus</h1>
+<div id="menus">
+{% for menu in menus %}
+	<p class="menu-elem">
+		<h2>{{ menu.name }}</h2>
+		<p>{{ menu.text }}</p>
+		<h4>{{ menu.price }}</h4>
+	</p>
+{% endfor %}
+</div>
+
+<div id="carte">
+	<h1>Carte</h1>
+	<h2>Entrées</h2>
+	<div id="entrees">
+	{% for entree in entrees %}
+		<p class="carte-elem">{{ entree.name }} - <span class="price">{{ entree.price }}</span></p>
+	{% endfor %}
+	</div>
+
+	<h2>Viandes</h2>
+	<div id="viandes">
+	{% for viande in viandes %}
+		<p class="carte-elem">{{ viande.name }} - <span class="price">{{ viande.price }}</span></p>
+	{% endfor %}
+	</div>
+
+	<h2>Desserts</h2>
+	<div id="desserts">
+	{% for dessert in desserts %}
+		<p class="carte-elem">{{ dessert.name }} - <span class="price">{{ dessert.price }}</span></p>
+	{% endfor %}
+	</div>
+	{% endblock %}
+</div>

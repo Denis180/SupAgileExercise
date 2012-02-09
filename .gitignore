@@ -13,7 +13,6 @@ doc/*
 src/*
 build/*
 man/*
-CalendarServer/*
 # OS generated files #
 ######################
 .DS_Store?

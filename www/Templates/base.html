@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-		<title>{% block title %}Chez Denis{% endblock %}</title>
+		<title>{% block title %}Le paradis français{% endblock %}</title>
    
 
 		{% block include %}
@@ -19,7 +19,7 @@
 		{% block header %}
 			<ul id="menu">
 				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Réservations</a></li>
+				<li><a href="{% url List %}">Carte</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
 		{% endblock %}

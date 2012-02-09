@@ -6,6 +6,7 @@ django_path=${path}/www
 if [ -d $bin_path/$a ]; then
 
 echo "A virtualenv is present"
+${bin_path}/pip install -r ${path}/requirement-dev.txt
 
 else
 

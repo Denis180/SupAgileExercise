@@ -5,4 +5,5 @@ import views
 
 urlpatterns = patterns('',
 	url(r'^$', views.Home, name="Home"),
+	url(r'^Carte/$', views.List, name="List"),
 )
