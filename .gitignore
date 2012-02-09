@@ -1,0 +1,25 @@
+# Cache files #
+###############
+*.pyc
+*.pyo
+*.idea/
+
+# Virtualenv files #
+####################
+bin/*
+lib/*
+include/*
+doc/*
+src/*
+build/*
+man/*
+CalendarServer/*
+# OS generated files #
+######################
+.DS_Store?
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+.Python
+*.*~
