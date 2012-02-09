@@ -1,4 +1,5 @@
 # Django settings for www project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -8,6 +9,8 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+SITE_ROOT = os.path.dirname(__file__)
 
 DATABASES = {
     'default': {
@@ -103,6 +106,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'www.urls'
 
 TEMPLATE_DIRS = (
+    os.path.join(SITE_ROOT, 'Templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -116,7 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
