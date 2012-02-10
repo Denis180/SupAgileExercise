@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.utils.translation import ugettext as _
+import settings
 
 
 class Menu(models.Model):
@@ -9,11 +10,7 @@ class Menu(models.Model):
 	name		= models.CharField(max_length = 64, blank = True)
 	text		= models.TextField(max_length = 2048)
 	price		= models.DecimalField(max_digits = 5, decimal_places = 2)
-	class Media:
-		js = [
-			'/media/admin/tinymce/jscripts/tiny_mce/tiny_mce.js',
-			'/path/to/your/tinymce_setup.js',
-		]
+	
 
 class Course(models.Model):
 	"""Element à la carte"""
