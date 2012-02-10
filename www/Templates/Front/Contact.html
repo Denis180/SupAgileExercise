@@ -1,7 +1,48 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block header-curview-contact %}class="selected"{% endblock %}
 
+{% block resources %}
+	<script type="text/javascript" src="{{ STATIC_URL}}js/Contact.js"></script>
+{% endblock %}
+
 {% block content %}
-Contacts
+<div id="contact" class="styled_box">
+	<div id="top_container">
+		<div id="contact_form">
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="label">{% trans "Name" %}</td>
+					<td class="value"><input type="text" name="name" /></td>
+				</tr>
+				<tr>
+					<td class="label">{% trans "E-mail" %}</td>
+					<td class="value"><input type="text" name="email" /></td>
+				</tr>
+				<tr>
+					<td class="label">{% trans "Message" %}</td>
+					<td class="value"><textarea name="message"></textarea></td>
+				</tr>
+			</table>
+		</div>
+		<div id="address">
+			<p>
+				Le Paradis Français <br />
+				16 rue de Bonne <br />
+				GRENOBLE
+			</p>
+			<p>
+				{% trans "Phone" %} : 0476835634<br />
+				{% trans "Fax" %} : 0476835633<br /></br />
+				{% trans "E-mail" %} : <a href="mailto:leparadisfrancais@gmail.com">leparadisfrancais@gmail.com</a>
+			</p>
+		</div>
+	</div>
+	<h4>{% trans "Restaurant location" %}</h4>
+	<div id="map"></div>
+	<div id="map-tooltip-text">{% blocktrans %}Welcome to "Le Paradis Français" !<br />Quality restaurant.<br />Varied meals.{% endblocktrans %}</div>
+</div>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script type="text/javascript" src="{{ STATIC_URL}}js/gmap3.min.js"></script>
 {% endblock %}

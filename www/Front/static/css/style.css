@@ -1,4 +1,44 @@
-@import url(http://fonts.googleapis.com/css?family=Qwigley|Kaushan+Script|Galdeano);
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url('kaushanscript-regular-webfont.eot');
+    src: local('Kaushan Script'),
+    	 local('KaushanScript-Regular'),
+    	 url('../font/kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/kaushanscript-regular-webfont.woff') format('woff'),
+         url('../font/kaushanscript-regular-webfont.ttf') format('truetype'),
+         url('../font/kaushanscript-regular-webfont.svg#KaushanScriptRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Qwigley';
+    src: url('qwigley-regular-webfont.eot');
+    src: local('Qwigley'),
+    	 local('Qwigley-Regular'),
+    	 url('../font/qwigley-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/qwigley-regular-webfont.woff') format('woff'),
+         url('../font/qwigley-regular-webfont.ttf') format('truetype'),
+         url('../font/qwigley-regular-webfont.svg#QwigleyRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Galdeano';
+    src: url('galdeano-regular-webfont.eot');
+    src: local('Galdeano Regular'),
+    	 local('Galdeano-Regular'),
+    	 url('../font/galdeano-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/galdeano-regular-webfont.woff') format('woff'),
+         url('../font/galdeano-regular-webfont.ttf') format('truetype'),
+         url('../font/galdeano-regular-webfont.svg#GaldeanoRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
 
 * {
 	padding: 0px;
@@ -28,6 +68,16 @@ body {
 	width: 1000px;
 	background: transparent url("../img/banner.jpg") no-repeat center center;
 	box-shadow: 0px 0px 8px rgba(0,0,0,0.8);
+}
+
+#header #banner #title {
+	color: white;
+	font-size: 38px;
+	font-family: "Kaushan Script";
+	text-shadow: 0px 1px 1px black;
+	right: 140px;
+	position: absolute;
+	top: 25px;
 }
 
 #header #menu {
@@ -87,15 +137,30 @@ body {
 	font-size: 42px;
 	color: #555;
 	letter-spacing: 2px;
+	font-weight: normal;
 }
 
 #list h2 {
 	font-family: "Kaushan Script";
 	font-size: 24px;
-	color: #444;
+	color: #666;
 	letter-spacing: 1px;
+	font-weight: normal;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
+#list hr {
+	border: 0px;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(100,100,100,0), rgba(100,100,100,0.75), rgba(100,100,100,0));
+    background-image:    -moz-linear-gradient(left, rgba(100,100,100,0), rgba(100,100,100,0.75), rgba(100,100,100,0));
+    background-image:     -ms-linear-gradient(left, rgba(100,100,100,0), rgba(100,100,100,0.75), rgba(100,100,100,0));
+    background-image:      -o-linear-gradient(left, rgba(100,100,100,0), rgba(100,100,100,0.75), rgba(100,100,100,0));
+    margin: 40px auto;
+    width: 60%;
+}
+#list .menu-text,
 #list .carte-elem {
 	font-family: Qwigley;
 	font-size: 24px;
@@ -111,4 +176,100 @@ body {
 #list #viandes,
 #list #desserts {
 	margin-bottom: 12px;
+}
+
+#contact #top_container {
+	width: 960px;
+	height: 200px;
+	position: relative;
+}
+
+#contact #contact_form {
+	width: 660px;
+	position: absolute;
+	left: 0px;
+}
+
+#contact #contact_form table {
+	border-collapse: separate;
+	border-spacing: 6px;
+}
+
+#contact #contact_form table td input,
+#contact #contact_form table td textarea {
+	padding: 8px;
+	font-size: 14px;
+	line-height: 14px;
+	border: 1px solid #ddd;
+	width: 450px;
+}
+
+#contact #contact_form table td textarea {
+	height: 100px;
+}
+
+#contact #contact_form table td.label {
+	width: auto;
+	min-width: 100px;
+	padding-right: 20px;
+	text-align: right;
+	color: #888;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+#contact #address {
+	width: 215px;
+	padding: 20px;
+	position: absolute;
+	right: 0px;
+	background: rgba(0, 0, 0, 0.05) url("../img/map-pin-48.png") no-repeat 3px 18px;
+	padding-left: 55px
+}
+
+#contact #address p {
+	margin-bottom: 8px;
+	color: #666;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#contact #address p a,
+#contact #address p a:visited {
+	color: #8C8CFF;
+	text-decoration: none;
+}
+
+#contact #address p a:hover {
+	text-decoration: underline;
+}
+
+#contact h4 {
+	color: #888;
+	font-weight: normal;
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+#contact #map {
+	margin-top: 10px;
+	border: 1px solid #bbb;
+	width: 960px;
+	height: 400px;
+}
+
+#contact #map-tooltip-text {
+	display: none;
+}
+
+#contact .labels {
+	color: red;
+	background-color: white;
+	font-family: "Lucida Grande", "Arial", sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	width: 140px;     
+	border: 2px solid black;
+	white-space: nowrap;
 }

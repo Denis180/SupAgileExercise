@@ -1,0 +1,119 @@
+[
+	{
+		"model"	: "Front.Course",
+		"pk"	: 1,
+		"fields": {
+			"category"	: "STARTER",
+			"name"		: "Foie gras de canard cuit au torchon, compotée de fruits de saison",
+			"price"		: 14
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 2,
+		"fields": {
+			"category"	: "STARTER",
+			"name"		: "Tartelette de chèvre à la tapenade, tomates confites et pesto",
+			"price"		: 9
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 3,
+		"fields": {
+			"category"	: "STARTER",
+			"name"		: "Trilogie de petits pots gourmands «maison» (rillette d'oie, terrine de canard,\nconfit de cochon bio au romarin), caviar d'artichauts et blinis",
+			"price"		: 12
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 4,
+		"fields": {
+			"category"	: "STARTER",
+			"name"		: "Notre soupe du moment",
+			"price"		: 6
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 5,
+		"fields": {
+			"category"	: "MEAT",
+			"name"		: "Noix d’entrecôte d’Argentine «Black Angus», frites au couteau et échalote confite",
+			"price"		: 25
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 6,
+		"fields": {
+			"category"	: "MEAT",
+			"name"		: "Le cassoulet du Chef: Saucisse de canard à la truffe, oie confite au thym citronné,\nfoie gras du Périgord poêlé, haricots tarbais et pain de campagne grillé",
+			"price"		: 20
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 7,
+		"fields": {
+			"category"	: "MEAT",
+			"name"		: "Traditionnel coq au vin «Ivre de Juliénas»",
+			"price"		: 18
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 8,
+		"fields": {
+			"category"	: "MEAT",
+			"name"		: "Le steak tartare avec sa garniture",
+			"price"		: 20
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 9,
+		"fields": {
+			"category"	: "MEAT",
+			"name"		: "Le confit de canard «maison» et ses  lentilles vertes du Puy",
+			"price"		: 20
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 10,
+		"fields": {
+			"category"	: "DESSERT",
+			"name"		: "Brownies au noix de pécan et crème tendre au chocolat",
+			"price"		: 9
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 11,
+		"fields": {
+			"category"	: "DESSERT",
+			"name"		: "Crème vanillée à la cardamome, spéculos et sorbet thé vert matcha à l'italienne",
+			"price"		: 12
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 12,
+		"fields": {
+			"category"	: "DESSERT",
+			"name"		: "Poire bio pochée en douceur de cumin et de citron vert gratinée à la pistache verte",
+			"price"		: 7
+		}
+	},
+		{
+		"model"	: "Front.Course",
+		"pk"	: 13,
+		"fields": {
+			"category"	: "DESSERT",
+			"name"		: "Café gourmand",
+			"price"		: 8
+		}
+	}
+]
