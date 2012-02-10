@@ -2,6 +2,9 @@ path=$(pwd)
 
 bin_path=${path}/bin
 django_path=${path}/www
+sudo ln -s /usr/lib/*/libjpeg.so /usr/lib
+sudo ln -s /usr/lib/*/libz.so /usr/lib
+sudo ln -s /usr/lib/*/libfreetype.so /usr/lib
 
 if [ -d $bin_path/$a ]; then
 

@@ -1,8 +1,11 @@
 # -*- coding:Utf-8 -*-
 from django.conf.urls.defaults import patterns, include, url
+from filebrowser.sites import site
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+import settings
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -16,6 +19,10 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
+    url(r'^admin/filebrowser/', include(site.urls)),
+     url(r'^site-media/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+        }),
     (r'^grappelli/', include('grappelli.urls')),
     (r'', include('Front.urls')),
 )
