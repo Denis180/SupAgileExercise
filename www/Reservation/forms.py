@@ -25,13 +25,13 @@ class ReservationForm(forms.ModelForm):
 		selected_date = cleaned_data.get('date')
 		selected_time = cleaned_data.get('time')
 		if selected_date < date.today():
-			raise forms.ValidationError(_(u"La date ne peut être inférieur à la date du jour"))
+			raise forms.ValidationError(_(u"The date cannot be inferior to today's date"))
 		elif selected_date == date.today():
 			now = datetime.now()
 			today = datetime.today()
 			reserve_time = today.replace(hour=selected_time.hour, minute=selected_time.minute, second=selected_time.second, microsecond=selected_time.microsecond)
 			if reserve_time < now :
-				raise forms.ValidationError(_(u"L'heure de réservation est déjà passée"))
+				raise forms.ValidationError(_(u"Booking hour has pass"))
 			if reserve_time >= now and now >= reserve_time - timedelta(seconds=900):
-				raise forms.ValidationError(_(u"Vous devez réserver plus de 15 minutes à l'avance"))
+				raise forms.ValidationError(_(u"You have to book your table fifteen minutes ahead"))
 		return cleaned_data
