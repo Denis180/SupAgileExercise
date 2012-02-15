@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
 
 from datetime import time
 
@@ -26,10 +26,8 @@ class Reservation(models.Model):
 	time = models.TimeField(choices=TIME_CHOICES, blank=False, null=False, default=TIME_CHOICES[0])
 
 	class Meta:
-		verbose_name = _('Reservation')
-		verbose_name_plural = _('Reservations')
+		verbose_name = _(u'Reservation')
+		verbose_name_plural = _(u'Reservations')
 
 	def __unicode__(self):
-		return _(u'Réservation du %(date)s à %(hour)s par %(name)s pour %(personnes)s personnes' % {'date' : self.date.strftime("%A %d. %B %Y"), 'hour' : self.time, 'name' : self.client_name, 'personnes' : self.numbers})
-
-
+		return _(u'Réservation du %(date)s à %(hour)s par %(name)s pour %(personnes)i personnes' % {'date' : self.date.strftime("%A %d. %B %Y"), 'hour' : self.time, 'name' : self.client_name, 'personnes' : self.numbers})
