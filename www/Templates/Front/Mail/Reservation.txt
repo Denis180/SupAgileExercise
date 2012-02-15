@@ -1,0 +1,16 @@
+{% load i18n %}
+
+{% blocktrans %}
+Dear {{ client_name }},
+
+Following your request, I confirm yout that we have registered a reservation for {{ numbers }} people.
+Please accept, Madam, Sir, the assurances of my highest consideration.
+
+
+Le Paradis Francais
+16 rue de Bonne
+GRENOBLE
+Tel : 0476835634
+Fax : 0476835633
+Mail : leparadisfrancais@gmail.com
+{% endblocktrans %}

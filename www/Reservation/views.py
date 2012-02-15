@@ -30,6 +30,12 @@ def reserve(request):
 				reservation = form.save(commit=False)
 				reservation.table_numbers = table_need
 				reservation.save()
+				mail_template = loader.get_template("Front/Mail/Reservation.txt")
+				c = Context({
+					"client_name"	: reservation.client_name,
+					"numbers"		: reservation.numbers
+				})
+				send_mail(u"Un client vous a laissé un message", mail_template.render(c) , form.cleaned_data['sender_email'], [settings.EMAIL_HOST_USER], fail_silently=True)
 				messages.success(request, u"Réservation effectuée avec succès")
 				return HttpResponseRedirect(reverse('Home'))
 		else:
