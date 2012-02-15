@@ -2,6 +2,59 @@
 {% load i18n %}
 
 {% block header-curview-home %}class="selected"{% endblock %}
+{% block include %}
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<link type="text/css" href="{{ STATIC_URL }}css/jquery-ui-1.8.17.custom.css" rel="Stylesheet" />
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("#id_date").datepicker({dateFormat:'dd/mm/yy',minDate:0,maxDate:"+1M"});
+			
+			$("#submit").submit(function() {return check_heure_min();});
+			
+			function check_heure_min() {
+				strDate = $("#id_date").attr("value");
+				if (strDate == "" || 
+				$("#nom").attr("value")=="" ||
+				$("#mail").attr("value")=="" ||
+				$("#tel").attr("value")=="") {
+					alert("Veuillez remplir tous les champs.");
+					return false;
+				}
+				day = strDate.substring(0,2);
+				month = strDate.substring(3,5);
+				year = strDate.substring(6,10);
+				d = new Date();
+				d.setDate(day);
+				d.setMonth(month-1);
+				d.setFullYear(year);
+				
+				d2 = new Date();
+
+				diff = d.getTime()-d2.getTime();
+	   		rez = (diff==0?diff:diff/Math.abs(diff));
+				
+	   		if (rez == 0) {//date choisi = date du jour
+	   			h = $("#heure").attr("value");
+	   			h = parseInt(h);
+	   			
+	   			//d.setHours("12");
+	   			//d.setMinutes("50");
+
+	   			if ((d.getHours()+1) == h) {
+	   				if (parseInt(d.getMinutes()) >= 45) {
+	   					alert("Réservez au moins 15 min avant");
+	   					return false;
+	   				}
+	   			} else if (d.getHours() >= h) {
+	   				alert("Votre horaire est déjà passé.");
+	   				return false;
+	   			}
+	   		}
+	   		return true;
+			}
+		});
+	</script>
+{% endblock %}
 
 {% block content %}
 <div id="home-articles">
