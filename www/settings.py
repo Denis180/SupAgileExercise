@@ -1,7 +1,6 @@
 # Django settings for www project.
 # -*- coding: utf-8 -*-
 
-from django.utils.translation import gettext_lazy as _
 
 import os
 
