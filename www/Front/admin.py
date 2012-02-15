@@ -1,12 +1,14 @@
 # -*- coding:Utf-8 -*-
 
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 from models import Menu, Course
 from django.contrib.auth.models import User, Group
 from django.contrib.sites.models import Site
+
 import settings
 
-class MenuAdmin(admin.ModelAdmin):
+class MenuAdmin(TranslationAdmin):
 	list_display	= ("name", "text", "price")
 	ordering		= ("name", "text", "price")
 	search_fields	= ("name", "text")
