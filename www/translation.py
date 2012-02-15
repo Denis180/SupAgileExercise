@@ -6,10 +6,10 @@ class MenuTranslationOptions(TranslationOptions):
     fields=('name','text',)
 
 class CourseTranslationOptions(TranslationOptions):
-    fields=('name')
+    fields=('name',)
 
 class ArticleTranslationOptions(TranslationOptions):
-    fields=('title','text')
+    fields=('title','text',)
 
 translator.register(Menu, MenuTranslationOptions)
 translator.register(Course, CourseTranslationOptions)
