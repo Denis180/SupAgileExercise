@@ -17,13 +17,13 @@ class Reservation(models.Model):
 		(time(21, 00, 00), '21H'),
 	)
 
-	email = models.EmailField(max_length=75, blank=False, null=False)
-	client_name = models.CharField(max_length=32, blank=False, null=False)
-	phone = models.IntegerField(max_length=16, blank=False, null=False)
-	numbers = models.IntegerField(max_length=2, blank=False, null=False)
-	table_numbers = models.IntegerField(max_length=2, blank=False, null=False)
-	date = models.DateField(blank=False, null=False)
-	time = models.TimeField(choices=TIME_CHOICES, blank=False, null=False, default=TIME_CHOICES[0])
+	email = models.EmailField(max_length=75, blank=False, null=False, verbose_name=_("E-mail"))
+	client_name = models.CharField(max_length=32, blank=False, null=False, verbose_name=_("Name"))
+	phone = models.IntegerField(max_length=16, blank=False, null=False, verbose_name=_("Phone"))
+	numbers = models.IntegerField(max_length=2, blank=False, null=False, verbose_name=_("Seats"))
+	table_numbers = models.IntegerField(max_length=2, blank=False, null=False, verbose_name=_("Tables"))
+	date = models.DateField(blank=False, null=False, verbose_name=_("Date"))
+	time = models.TimeField(choices=TIME_CHOICES, blank=False, null=False, default=TIME_CHOICES[0], verbose_name=_("Time"))
 
 	class Meta:
 		verbose_name = _(u'Reservation')
