@@ -1,6 +1,8 @@
 # Django settings for www project.
 # -*- coding: utf-8 -*-
 
+from django.utils.translation import gettext_lazy as _
+
 import os
 
 
@@ -49,6 +51,16 @@ USE_I18N = True
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale
 USE_L10N = True
+
+
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('fr', gettext('French')),
+    ('en', gettext('English')),
+)
+
+DEFAULT_LANGUAGE = 1
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -101,6 +113,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'localeurl.middleware.LocaleURLMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,6 +142,8 @@ INSTALLED_APPS = (
     'filebrowser',
     'django.contrib.admin',
     'Front',
+    'modeltranslation',
+    'localeurl',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -160,3 +175,6 @@ LOGGING = {
 ############### DJANGO GRAPPELLI SETTINGS ###################
 
 GRAPPELLI_ADMIN_TITLE="Administration du paradis français"
+
+
+MODELTRANSLATION_TRANSLATION_REGISTRY = "www.translation"

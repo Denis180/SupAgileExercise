@@ -24,5 +24,6 @@ urlpatterns = patterns('',
             'document_root': settings.MEDIA_ROOT,
         }),
     (r'^grappelli/', include('grappelli.urls')),
+    (r'^localeurl/', include('localeurl.urls')),
     (r'', include('Front.urls')),
 )
