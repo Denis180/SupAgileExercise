@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-15 16:36+0100\n"
+"POT-Creation-Date: 2012-02-15 17:07+0100\n"
 "PO-Revision-Date: 2012-02-15 16:20+0100\n"
 "Last-Translator: Zécré Dobri\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -50,15 +50,19 @@ msgstr "Viandes"
 msgid "Desserts"
 msgstr "Desserts"
 
-#: Front/views.py:46
+#: Front/views.py:43
+msgid "Contact us for group reservation (from 15 persons)"
+msgstr "Contactez nous pour des réservations de groupes (à partir de 15 personnes)"
+
+#: Front/views.py:49
 msgid "There is no more free tables"
 msgstr "Il n'y a plus de place disponible"
 
-#: Front/views.py:53
+#: Front/views.py:56
 msgid "Successful booking"
 msgstr "Réservation effectuée"
 
-#: Front/views.py:84
+#: Front/views.py:87
 msgid "A customer left you a message"
 msgstr "Un client vous a laissé un message"
 
@@ -81,6 +85,36 @@ msgstr "L'heure de réservation est dépassée"
 #: Reservation/forms.py:36
 msgid "You have to book your table fifteen minutes ahead"
 msgstr "Vous devez réserver au moins 15 minutes avant"
+
+#: Reservation/models.py:20 Templates/Front/Contact.html:22
+#: Templates/Front/Contact.html.py:45
+msgid "E-mail"
+msgstr "Courriel"
+
+#: Reservation/models.py:21 Templates/Front/Contact.html:18
+msgid "Name"
+msgstr "Nom"
+
+#: Reservation/models.py:22 Templates/Front/Contact.html:43
+msgid "Phone"
+msgstr "Tel."
+
+#: Reservation/models.py:23
+#, fuzzy
+msgid "Seats"
+msgstr "Places"
+
+#: Reservation/models.py:24
+msgid "Tables"
+msgstr "Tables"
+
+#: Reservation/models.py:25
+msgid "Date"
+msgstr "Date"
+
+#: Reservation/models.py:26
+msgid "Time"
+msgstr "Heure"
 
 #: Reservation/models.py:29
 msgid "Reservation"
@@ -113,13 +147,110 @@ msgstr "Contact"
 msgid "About Us"
 msgstr "A propos de nous"
 
-#: Templates/Front/Contact.html:18
-msgid "Name"
-msgstr "Nom"
+#: Templates/Front/About.html:8
+msgid "The restaurant"
+msgstr "Le restaurant"
 
-#: Templates/Front/Contact.html:22 Templates/Front/Contact.html.py:45
-msgid "E-mail"
-msgstr "Courriel"
+#: Templates/Front/About.html:11
+msgid ""
+"\n"
+"\t\tWalk in the restaurant \"Le Paradis Français\" et embrace the friendly\n"
+"\tand calming atmosphere there is. With its elegant and refined design,\n"
+"\tthis place is a house of heavenly peace. On the menu, you'll find\n"
+"\ttraditional French cuisine prepared by our experienced Chef. You'll\n"
+"\talso find some delicious \"Auvergnate\" specialties. When the sun comes\n"
+"\tout, you'll be able to enjoy all your favorite specialties on our\n"
+"\tdeck. We also allow people to rent the restaurant for any private\n"
+"\tevents. A place that every amateur of tasty food definitely has to go\n"
+"\tto. Let your friends know.\n"
+msgstr ""
+
+#: Templates/Front/About.html:24
+msgid "The employees"
+msgstr "Les employés"
+
+#: Templates/Front/About.html:26
+msgid ""
+"\n"
+"\t\tYour satisfaction ... a teamwork. The preparation of all our dishes is\n"
+"\tguaranteed by a team of chef known as: The brigade. This team\n"
+"\torganizes the restaurant in order for the clients to have the best\n"
+"\texperience possible incorporating elegance, class and , of course\n"
+"\ttasty food.\n"
+msgstr ""
+
+#: Templates/Front/About.html:34
+msgid "Tourism"
+msgstr "Tourisme"
+
+#: Templates/Front/About.html:36
+msgid "Grenoble"
+msgstr "Grenoble"
+
+#: Templates/Front/About.html:38
+msgid ""
+"\n"
+"\t\tSurrounded by the Vercors, Chartreuse and the Belledonne mountain\n"
+"\tchain, Grenoble benefits an incredible landscape as Stendhal was\n"
+"\tsaying about his native town: \"At the end of every avenue, a\n"
+"\tmountain\".\n"
+msgstr ""
+
+#: Templates/Front/About.html:46
+msgid "La Bastille"
+msgstr "La Bastille"
+
+#: Templates/Front/About.html:48
+msgid ""
+"\n"
+"\t\t« I haven't the strength to describe the admirable view, which changes\n"
+"\tevery hundred steps, that one enjoys from the Bastille... » It is with\n"
+"\tthese words that Stendhal paid hommage to the site.\n"
+"\tThe Bastille is visited by some 600,000 people each year,\n"
+"\tapproximately half of whom take the cable car from the city centre.\n"
+"\tThe rest of the visitors go by car up the steep and narrow road from\n"
+"\tLa Tronche, or on foot by one of the numerous signposted paths to\n"
+"\treach the Bastille.\n"
+"\tIn 2005 the Bastille underwent substantial works in order to make the\n"
+"\tentirety of the site accessible to persons of reduced mobility. It is\n"
+"\tthe setting for numerous exhibitions and social and cultural events,\n"
+"\twhile also being the destination of an annual cycle race (La Prise De\n"
+"\tLa Bastille) and a via ferrata (Les Prises De La Bastille).\n"
+"\tTo do: Hike to the fortress deck to have a great view on the city\n"
+msgstr ""
+
+#: Templates/Front/About.html:65
+msgid "Le Jardin de ville"
+msgstr ""
+
+#: Templates/Front/About.html:67
+msgid ""
+"\n"
+"\t\tAt the center of the city, that green garden is a heavenly place for\n"
+"\tanyone searching calm and tranquility. There is numerous benches to\n"
+"\tbenefit the shadows of very old trees while downhill you'll find\n"
+"\tsquare parks to enjoy. Nearby there is also a playground for your\n"
+"\tkids, a music kiosk dated from in between the world wars used for\n"
+"\tvarious celebrations. This garden was built in 1622 by \"le Connétable\n"
+"\tde Lesdiquières\". in order to get there from Place Grenette you'll\n"
+"\thave to pass under a small porch taking you in front of a bronze\n"
+"\tstatue called Fontaine du Torrent.\n"
+msgstr ""
+
+#: Templates/Front/About.html:79
+msgid "Place Grenette"
+msgstr "Place Grenette"
+
+#: Templates/Front/About.html:81
+msgid ""
+"\n"
+"\t\tIn middle age, this place was a land used for cereals and gave it its\n"
+"\tname. Right in the middle of the city's historical center it later\n"
+"\tbecame a walk only street filled with café's and restaurant's decks\n"
+"\ttransformed into a winter market as the snow starts to fall on the\n"
+"\tcity.\n"
+"\tTo see: La fontaine aux dauphins (or lavalette) built in 1824\n"
+msgstr ""
 
 #: Templates/Front/Contact.html:26
 msgid "Message"
@@ -128,10 +259,6 @@ msgstr "Message"
 #: Templates/Front/Contact.html:31
 msgid "Send"
 msgstr "Envoyer"
-
-#: Templates/Front/Contact.html:43
-msgid "Phone"
-msgstr "Téléphone"
 
 #: Templates/Front/Contact.html:44
 msgid "Fax"
@@ -149,25 +276,25 @@ msgstr ""
 "Bienvenue chez \"Le Paradis Français\" !<br />Un restaurant de qualité.<br /"
 ">Des plats variés"
 
-#: Templates/Front/Home.html:19
+#: Templates/Front/Home.html:75
 msgid "previous"
 msgstr "précédent"
 
-#: Templates/Front/Home.html:23
+#: Templates/Front/Home.html:79
 #, python-format
 msgid "Page %(page)s of %(total_page)s"
 msgstr "Page %(page)s sur %(total_page)s"
 
-#: Templates/Front/Home.html:27
+#: Templates/Front/Home.html:83
 msgid "next"
 msgstr "suivant"
 
-#: Templates/Front/Home.html:43
+#: Templates/Front/Home.html:99
 #, python-format
 msgid " Please correct the error%(form.errors|pluralize)s below "
 msgstr " Merci de corriger les erreur%(form.errors|pluralize)s ci-dessous"
 
-#: Templates/Front/Home.html:49
+#: Templates/Front/Home.html:105
 msgid "Reserve"
 msgstr "Reserver"
 

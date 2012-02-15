@@ -124,13 +124,14 @@ body {
 }
 
 #content #home-articles > div > p.article_title {
-	font-size: 14px;
-	line-height: 32px;
+	font-size: 22px;
+	line-height: 48px;
 	color: #333;
+	font-weight: bold;
 }
 
-#content #home-articles > div > p.article_text {
-	font-size: 12px;
+#content #home-articles > div > div.article_text {
+	font-size: 14px;
 	color: #666;
 }
 
@@ -159,7 +160,13 @@ body {
 	margin-bottom: 20px;
 }
 
-
+#content #home-reservations .success {
+	list-style-type: none;
+	padding: 6px;
+	background: #DDD;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
 
 .styled_box {
 	padding: 20px;

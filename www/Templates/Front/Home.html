@@ -65,7 +65,7 @@
 	{% for article in articles.object_list %}
 	<div class="styled_box">
 		<p class="article_title">{{ article.title|upper }}</p>
-		<p class="article_text">{{ article.text|safe }}</p>
+		<div class="article_text">{{ article.text|safe }}</div>
 	</div>
 	{% endfor %}
 
