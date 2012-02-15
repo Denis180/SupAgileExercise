@@ -43,14 +43,14 @@ def Home(request):
 			table_need = int(math.ceil(temp))
 
 			if table_disp < table_need:
-				messages.error(request, _(u"Il n'y a plus assez de tables disponibles pour votre réservation"))
+				messages.error(request, _(u"There is no more free tables"))
 				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
 			else:
 				form.table_numbers = table_need
 				reservation = form.save(commit=False)
 				reservation.table_numbers = table_need
 				reservation.save()
-				messages.success(request, _(u"Réservation effectuée avec succès"))
+				messages.success(request, _(u"Successful booking"))
 				return HttpResponseRedirect(reverse('Home'))
 		else:
 			return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
@@ -81,7 +81,7 @@ def Contact(request):
 			c = Context({
 				"form"	: form
 			})
-			send_mail(_(u"Un client vous a laissé un message"), mail_template.render(c) , form.cleaned_data['sender_email'], [settings.EMAIL_HOST_USER], fail_silently=False)
+			send_mail(_(u"A customer left you a message"), mail_template.render(c) , form.cleaned_data['sender_email'], [settings.EMAIL_HOST_USER], fail_silently=False)
 			return HttpResponseRedirect(reverse("Home"))
 	else:
 		form = ContactForm()
