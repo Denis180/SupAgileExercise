@@ -156,6 +156,8 @@ LOGGING = {
     }
 }
 
+EMAIL_HOST_USER = "leostevenin@gmail.com"
+
 
 ############### DJANGO GRAPPELLI SETTINGS ###################
 
