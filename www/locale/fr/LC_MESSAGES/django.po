@@ -1,0 +1,177 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Zécré Dobri, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-15 16:36+0100\n"
+"PO-Revision-Date: 2012-02-15 16:20+0100\n"
+"Last-Translator: Zécré Dobri\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Lokalize 1.2\n"
+
+#: settings.py:58
+msgid "French"
+msgstr "Français"
+
+#: settings.py:59
+msgid "English"
+msgstr "Anglais"
+
+#: Article/models.py:14
+msgid "Article"
+msgstr "Article"
+
+#: Article/models.py:15
+msgid "Articles"
+msgstr "Articles"
+
+#: Article/models.py:18
+#, python-format
+msgid "Article : %(title)s du  %(date)s"
+msgstr "Article : %(title)s du  %(date)s"
+
+#: Front/models.py:17 Templates/Front/List.html:28
+msgid "Starters"
+msgstr "Entrées"
+
+#: Front/models.py:18 Templates/Front/List.html:37
+msgid "Meats"
+msgstr "Viandes"
+
+#: Front/models.py:19 Templates/Front/List.html:46
+msgid "Desserts"
+msgstr "Desserts"
+
+#: Front/views.py:46
+msgid "There is no more free tables"
+msgstr "Il n'y a plus de place disponible"
+
+#: Front/views.py:53
+msgid "Successful booking"
+msgstr "Réservation effectuée"
+
+#: Front/views.py:84
+msgid "A customer left you a message"
+msgstr "Un client vous a laissé un message"
+
+#: Reservation/forms.py:17
+msgid ""
+"Please enter valid date with format in : 1990-05-28, 05/28/1987, 03/27/06, "
+"30/05/1996, 30/08/06"
+msgstr ""
+"Veuillez entrer une date dans le format suivant : 1990-05-28, 05/28/1987, "
+"03/27/06, 30/05/1996, 30/08/06"
+
+#: Reservation/forms.py:28
+msgid "The date cannot be inferior to today's date"
+msgstr "La date ne peut précéder aujourd'hui"
+
+#: Reservation/forms.py:34
+msgid "Booking hour has pass"
+msgstr "L'heure de réservation est dépassée"
+
+#: Reservation/forms.py:36
+msgid "You have to book your table fifteen minutes ahead"
+msgstr "Vous devez réserver au moins 15 minutes avant"
+
+#: Reservation/models.py:29
+msgid "Reservation"
+msgstr "Réservation"
+
+#: Reservation/models.py:30
+msgid "Reservations"
+msgstr "Réservations"
+
+#: Reservation/models.py:33
+#, python-format
+msgid ""
+"Réservation du %(date)s à %(hour)s par %(name)s pour %(personnes)i personnes"
+msgstr ""
+"Réservation du %(date)s à %(hour)s par %(name)s pour %(personnes)i personnes"
+
+#: Templates/base.html:26
+msgid "Home"
+msgstr "Accueil"
+
+#: Templates/base.html:27
+msgid "Menu"
+msgstr "Menu"
+
+#: Templates/base.html:28
+msgid "Contact"
+msgstr "Contact"
+
+#: Templates/base.html:29
+msgid "About Us"
+msgstr "A propos de nous"
+
+#: Templates/Front/Contact.html:18
+msgid "Name"
+msgstr "Nom"
+
+#: Templates/Front/Contact.html:22 Templates/Front/Contact.html.py:45
+msgid "E-mail"
+msgstr "Courriel"
+
+#: Templates/Front/Contact.html:26
+msgid "Message"
+msgstr "Message"
+
+#: Templates/Front/Contact.html:31
+msgid "Send"
+msgstr "Envoyer"
+
+#: Templates/Front/Contact.html:43
+msgid "Phone"
+msgstr "Téléphone"
+
+#: Templates/Front/Contact.html:44
+msgid "Fax"
+msgstr "Fax"
+
+#: Templates/Front/Contact.html:49
+msgid "Restaurant location"
+msgstr "Emplacement du restaurant"
+
+#: Templates/Front/Contact.html:51
+msgid ""
+"Welcome to \"Le Paradis Français\" !<br />Quality restaurant.<br />Various "
+"dishes."
+msgstr ""
+"Bienvenue chez \"Le Paradis Français\" !<br />Un restaurant de qualité.<br /"
+">Des plats variés"
+
+#: Templates/Front/Home.html:19
+msgid "previous"
+msgstr "précédent"
+
+#: Templates/Front/Home.html:23
+#, python-format
+msgid "Page %(page)s of %(total_page)s"
+msgstr "Page %(page)s sur %(total_page)s"
+
+#: Templates/Front/Home.html:27
+msgid "next"
+msgstr "suivant"
+
+#: Templates/Front/Home.html:43
+#, python-format
+msgid " Please correct the error%(form.errors|pluralize)s below "
+msgstr " Merci de corriger les erreur%(form.errors|pluralize)s ci-dessous"
+
+#: Templates/Front/Home.html:49
+msgid "Reserve"
+msgstr "Reserver"
+
+#: Templates/Front/List.html:13
+#, python-format
+msgid "Menu at %(price)s&euro;"
+msgstr "Menu à %(price)s&euro;"

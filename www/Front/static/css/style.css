@@ -115,8 +115,23 @@ body {
 }
 
 #content #home-articles {
-	width: 650px;
+	width: 700px;
 	float: left;
+}
+
+#content #home-articles > div {
+	margin-bottom: 20px;
+}
+
+#content #home-articles > div > p.article_title {
+	font-size: 14px;
+	line-height: 32px;
+	color: #333;
+}
+
+#content #home-articles > div > p.article_text {
+	font-size: 12px;
+	color: #666;
 }
 
 #content #home-reservations {
