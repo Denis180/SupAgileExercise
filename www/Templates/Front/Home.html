@@ -7,7 +7,23 @@
 <div id="home-articles">
 
 </div>
-<div id="home-reservations">
-
+<div id="home-reservations" class="styled_box">
+	{% if messages %}
+		<ul class="messages">
+		    {% for message in messages %}
+		    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		    {% endfor %}
+		</ul>
+	{% endif %}
+	{% if reservation_form.errors %}
+		<p style="color: red;">
+		    Please correct the error{{ form.errors|pluralize }} below.
+		</p>
+	{% endif %}
+	<form action="{% url Home %}" method="POST">
+    	{% csrf_token %}
+	    {{ reservation_form.as_p }}
+		<input type="submit" value="{% trans "Reserve" %}">
+	</form>
 </div>
 {% endblock %}

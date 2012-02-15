@@ -2,7 +2,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from filebrowser.sites import site
 
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 import settings
 
@@ -26,4 +25,5 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')),
     (r'^localeurl/', include('localeurl.urls')),
     (r'', include('Front.urls')),
+    (r'', include('Article.urls')),
 )

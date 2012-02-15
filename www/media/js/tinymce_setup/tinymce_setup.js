@@ -62,20 +62,20 @@ tinyMCE.init({
     remove_script_host: true,
 
     // Content CSS
-    // content_css : "css/example.css",
+    content_css : "",
 
     // Plugins
-    plugins: 'advimage,advlink,fullscreen,paste,media,searchreplace,grappelli,grappelli_contextmenu,template',
+    plugins: 'advimage,advlink,fullscreen,paste,media,searchreplace,grappelli,template',
 
     // Theme Advanced
     theme_advanced_toolbar_location: 'top',
     theme_advanced_toolbar_align: 'left',
     theme_advanced_statusbar_location: 'bottom',
-    theme_advanced_buttons1: 'formatselect,styleselect,|,bold,italic,underline,|,bullist,numlist,blockquote,|,undo,redo,|,link,unlink,|,image,|,fullscreen,|,grappelli_adv',
-    theme_advanced_buttons2: 'search,|,pasteword,template,media,charmap,|,code,|,table,cleanup,grappelli_documentstructure',
+    theme_advanced_buttons1: 'formatselect,|,bold,italic,underline,|,bullist,numlist,|,undo,redo,|,link,unlink,|,image,|,fullscreen',
+    theme_advanced_buttons2: '',
     theme_advanced_buttons3: '',
     theme_advanced_path: false,
-    theme_advanced_blockformats: 'p,h2,h3,h4,pre',
+    theme_advanced_blockformats: 'p,h3,h4,h5',
     theme_advanced_resizing: true,
     theme_advanced_resize_horizontal: false,
     theme_advanced_resizing_use_cookie: true,

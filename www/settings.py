@@ -141,9 +141,12 @@ INSTALLED_APPS = (
     'grappelli',
     'filebrowser',
     'django.contrib.admin',
-    'Front',
+
     'modeltranslation',
     'localeurl',
+    'Reservation',
+    'Front',
+    'Article',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -170,6 +173,8 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_HOST_USER = "leostevenin@gmail.com"
 
 
 ############### DJANGO GRAPPELLI SETTINGS ###################
