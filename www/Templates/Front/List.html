@@ -15,7 +15,7 @@
 			{{ menu.name }}
 		{% endif %}
 		</h2>
-		<p class="menu-text">{{ menu.text }}</p>
+		<div class="menu-text">{{ menu.text|safe }}</div>
 		{% if menu.name %}
 			<h4>{{ menu.price }}&euro;</h4>
 		{% endif %}

@@ -1,119 +1,128 @@
 [
 	{
-		"model"	: "Front.Course",
-		"pk"	: 1,
+		"pk": 1, 
+		"model": "Front.menu", 
 		"fields": {
-			"category"	: "STARTER",
-			"name"		: "Foie gras de canard cuit au torchon, compotée de fruits de saison",
-			"price"		: 14
+			"text": "<h3>Pour d&eacute;buter :</h3>\r\n<p>Foie gras torchon, cerise</p>\r\n<p>&nbsp;</p>\r\n<h3>Entr&eacute;es :&nbsp;</h3>\r\n<p>Maquereau fum&eacute;, asperge, citron</p>\r\n<p>Gnuddi, girolles, petits pois, &eacute;pinards sauvages</p>\r\n<p>&nbsp;</p>\r\n<h3>Plats :</h3>\r\n<p>Maigre de ligne, minestrome de printemps</p>\r\n<p>Poitrine de cochon basque, betterave, navet</p>\r\n<p>&nbsp;</p>\r\n<h3>Desserts :</h3>\r\n<p>Napol&eacute;on, miel &agrave; la truffe d'&eacute;t&eacute;</p>\r\n<p>Tarte noisettine &agrave; la fraise</p>\r\n<p>Panacotta &agrave; la grappa, framboise, amandes fra&icirc;ches</p>\r\n<p>&nbsp;</p>\r\n<p><img src=\"/site-media/uploads/image00.png\" alt=\"\" width=\"200\" height=\"200\" /></p>", 
+			"price": "35", 
+			"name": ""
 		}
 	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 2,
+	{
+		"pk": 1, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "STARTER",
-			"name"		: "Tartelette de chèvre à la tapenade, tomates confites et pesto",
-			"price"		: 9
+			"category": "STARTER", 
+			"price": "14", 
+			"name": "Foie gras de canard cuit au torchon, compot\u00e9e de fruits de saison"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 3,
+	}, 
+	{
+		"pk": 2, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "STARTER",
-			"name"		: "Trilogie de petits pots gourmands «maison» (rillette d'oie, terrine de canard,\nconfit de cochon bio au romarin), caviar d'artichauts et blinis",
-			"price"		: 12
+			"category": "STARTER", 
+			"price": "9", 
+			"name": "Tartelette de ch\u00e8vre \u00e0 la tapenade, tomates confites et pesto"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 4,
+	}, 
+	{
+		"pk": 3, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "STARTER",
-			"name"		: "Notre soupe du moment",
-			"price"		: 6
+			"category": "STARTER", 
+			"price": "12", 
+			"name": "Trilogie de petits pots gourmands \u00abmaison\u00bb (rillette d'oie, terrine de canard,\nconfit de cochon bio au romarin), caviar d'artichauts et blinis"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 5,
+	}, 
+	{
+		"pk": 4, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "MEAT",
-			"name"		: "Noix d’entrecôte d’Argentine «Black Angus», frites au couteau et échalote confite",
-			"price"		: 25
+			"category": "STARTER", 
+			"price": "6", 
+			"name": "Notre soupe du moment"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 6,
+	}, 
+	{
+		"pk": 5, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "MEAT",
-			"name"		: "Le cassoulet du Chef: Saucisse de canard à la truffe, oie confite au thym citronné,\nfoie gras du Périgord poêlé, haricots tarbais et pain de campagne grillé",
-			"price"		: 20
+			"category": "MEAT", 
+			"price": "25", 
+			"name": "Noix d\u2019entrec\u00f4te d\u2019Argentine \u00abBlack Angus\u00bb, frites au couteau et \u00e9chalote confite"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 7,
+	}, 
+	{
+		"pk": 6, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "MEAT",
-			"name"		: "Traditionnel coq au vin «Ivre de Juliénas»",
-			"price"		: 18
+			"category": "MEAT", 
+			"price": "20", 
+			"name": "Le cassoulet du Chef: Saucisse de canard \u00e0 la truffe, oie confite au thym citronn\u00e9,\nfoie gras du P\u00e9rigord po\u00eal\u00e9, haricots tarbais et pain de campagne grill\u00e9"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 8,
+	}, 
+	{
+		"pk": 7, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "MEAT",
-			"name"		: "Le steak tartare avec sa garniture",
-			"price"		: 20
+			"category": "MEAT", 
+			"price": "18", 
+			"name": "Traditionnel coq au vin \u00abIvre de Juli\u00e9nas\u00bb"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 9,
+	}, 
+	{
+		"pk": 8, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "MEAT",
-			"name"		: "Le confit de canard «maison» et ses  lentilles vertes du Puy",
-			"price"		: 20
+			"category": "MEAT", 
+			"price": "20", 
+			"name": "Le steak tartare avec sa garniture"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 10,
+	}, 
+	{
+		"pk": 9, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "DESSERT",
-			"name"		: "Brownies au noix de pécan et crème tendre au chocolat",
-			"price"		: 9
+			"category": "MEAT", 
+			"price": "20", 
+			"name": "Le confit de canard \u00abmaison\u00bb et ses  lentilles vertes du Puy"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 11,
+	}, 
+	{
+		"pk": 10, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "DESSERT",
-			"name"		: "Crème vanillée à la cardamome, spéculos et sorbet thé vert matcha à l'italienne",
-			"price"		: 12
+			"category": "DESSERT", 
+			"price": "9", 
+			"name": "Brownies au noix de p\u00e9can et cr\u00e8me tendre au chocolat"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 12,
+	}, 
+	{
+		"pk": 11, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "DESSERT",
-			"name"		: "Poire bio pochée en douceur de cumin et de citron vert gratinée à la pistache verte",
-			"price"		: 7
+			"category": "DESSERT", 
+			"price": "12", 
+			"name": "Cr\u00e8me vanill\u00e9e \u00e0 la cardamome, sp\u00e9culos et sorbet th\u00e9 vert matcha \u00e0 l'italienne"
 		}
-	},
-		{
-		"model"	: "Front.Course",
-		"pk"	: 13,
+	}, 
+	{
+		"pk": 12, 
+		"model": "Front.course", 
 		"fields": {
-			"category"	: "DESSERT",
-			"name"		: "Café gourmand",
-			"price"		: 8
+			"category": "DESSERT", 
+			"price": "7", 
+			"name": "Poire bio poch\u00e9e en douceur de cumin et de citron vert gratin\u00e9e \u00e0 la pistache verte"
+		}
+	}, 
+	{
+		"pk": 13, 
+		"model": "Front.course", 
+		"fields": {
+			"category": "DESSERT", 
+			"price": "8", 
+			"name": "Caf\u00e9 gourmand"
 		}
 	}
 ]

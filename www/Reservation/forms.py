@@ -6,6 +6,7 @@ from datetime import date, timedelta, datetime
 
 from www.Reservation.models import Reservation
 
+
 class ReservationForm(forms.ModelForm):
 	date = forms.DateField(input_formats =(
 								'%Y-%m-%d',

@@ -1,0 +1,5 @@
+Bonjour,
+
+{% if form.sender_name %}{{ form.sender_name }}{% else %}Un visiteur{% endif %} vous a envoyé un message :
+
+{{ form.message }}

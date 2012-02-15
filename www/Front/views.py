@@ -1,12 +1,13 @@
 # -*- coding:Utf-8 -*-
 
 from django.core.urlresolvers import reverse
-from django.shortcuts import render_to_response, HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.http import Http404, HttpResponseRedirect, HttpResponse, HttpResponseNotFound
+from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib import messages
 
 from models import *
+from forms import *
 
 from Reservation.models import PERSON_ON_TABLE, TABLE_NUMBER, Reservation
 from Reservation.forms import ReservationForm
@@ -70,4 +71,19 @@ def List(request):
 	},context_instance=RequestContext(request))
 
 def Contact(request):
-	return render_to_response('Front/Contact.html',{},context_instance=RequestContext(request))
+	from django.template import loader, Context
+	from django.core.mail import send_mail
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			mail_template = loader.get_template("Front/Mail/Contact.txt")
+			c = Context({
+				"form"	: form
+			})
+			send_mail(u"Un client vous a laissé un message", mail_template.render(c) , form.cleaned_data['sender_email'], [settings.EMAIL_HOST_USER], fail_silently=False)
+			return HttpResponseRedirect(reverse("Home"))
+	else:
+		form = ContactForm()
+	return render_to_response("Front/Contact.html",{
+		"form"	: form
+	},context_instance=RequestContext(request))

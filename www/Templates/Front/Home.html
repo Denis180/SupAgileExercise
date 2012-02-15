@@ -4,7 +4,6 @@
 {% block header-curview-home %}class="selected"{% endblock %}
 
 {% block content %}
-	
 <div id="home-articles">
 
 	{% for article in articles.object_list %}
@@ -30,8 +29,8 @@
 	    </span>
 	</div>
 </div>
+<div id="home-reservations" class="styled_box">
 
-<div id="home-reservations">
 	{% if messages %}
 		<ul class="messages">
 		    {% for message in messages %}
@@ -44,12 +43,12 @@
 		    Please correct the error{{ form.errors|pluralize }} below.
 		</p>
 	{% endif %}
-	<form id='reservation' action="{{ request.path }}" method="POST">
+	<form action="{% url Home %}" method="POST">
     	{% csrf_token %}
-	<table>
-	    {{ reservation_form.as_table }}
-	</table>
-	<input type="submit" value="Submit">
+	    {{ reservation_form.as_p }}
+		<input type="submit" value="{% trans "Reserve" %}">
+	</form>
 </div>
 
 {% endblock %}
+
