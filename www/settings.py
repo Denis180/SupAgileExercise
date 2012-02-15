@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'filebrowser',
     'django.contrib.admin',
     'Front',
+    'Reservation',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
