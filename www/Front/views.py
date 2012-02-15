@@ -41,13 +41,13 @@ def Home(request):
 
 			if form.cleaned_data['numbers'] >= 15:
 				messages.error(request, _(u"Contact us for group reservation (from 15 persons)"))
-				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
+				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles, "LANG": request.LANGUAGE_CODE},context_instance=RequestContext(request))
 			temp = float(request.POST['numbers'])/float(PERSON_ON_TABLE)
 			table_need = int(math.ceil(temp))
 
 			if table_disp < table_need:
 				messages.error(request, _(u"There is no more free tables"))
-				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
+				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles, "LANG": request.LANGUAGE_CODE},context_instance=RequestContext(request))
 			else:
 				form.table_numbers = table_need
 				reservation = form.save(commit=False)
@@ -56,10 +56,10 @@ def Home(request):
 				messages.success(request, _(u"Successful booking"))
 				return HttpResponseRedirect(reverse('Home'))
 		else:
-			return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
+			return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles, "LANG": request.LANGUAGE_CODE},context_instance=RequestContext(request))
 	else:
 		form = ReservationForm()
-	return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
+	return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles, "LANG": request.LANGUAGE_CODE},context_instance=RequestContext(request))
 
 def List(request):
 	menus		= Menu.objects.all()
