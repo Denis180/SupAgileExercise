@@ -5,6 +5,7 @@ from django.http import Http404, HttpResponseRedirect, HttpResponse, HttpRespons
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib import messages
+from django.utils.translation import ugettext_lazy as _
 
 from models import *
 from forms import *
@@ -42,14 +43,14 @@ def Home(request):
 			table_need = int(math.ceil(temp))
 
 			if table_disp < table_need:
-				messages.error(request, u"Il n'y a plus assez de tables disponibles pour votre réservation")
+				messages.error(request, _(u"Il n'y a plus assez de tables disponibles pour votre réservation"))
 				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
 			else:
 				form.table_numbers = table_need
 				reservation = form.save(commit=False)
 				reservation.table_numbers = table_need
 				reservation.save()
-				messages.success(request, u"Réservation effectuée avec succès")
+				messages.success(request, _(u"Réservation effectuée avec succès"))
 				return HttpResponseRedirect(reverse('Home'))
 		else:
 			return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
@@ -80,10 +81,13 @@ def Contact(request):
 			c = Context({
 				"form"	: form
 			})
-			send_mail(u"Un client vous a laissé un message", mail_template.render(c) , form.cleaned_data['sender_email'], [settings.EMAIL_HOST_USER], fail_silently=False)
+			send_mail(_(u"Un client vous a laissé un message"), mail_template.render(c) , form.cleaned_data['sender_email'], [settings.EMAIL_HOST_USER], fail_silently=False)
 			return HttpResponseRedirect(reverse("Home"))
 	else:
 		form = ContactForm()
 	return render_to_response("Front/Contact.html",{
 		"form"	: form
 	},context_instance=RequestContext(request))
+
+def About(request):
+	return render_to_response('Front/About.html',{},context_instance=RequestContext(request))
