@@ -4,13 +4,33 @@
 {% block header-curview-home %}class="selected"{% endblock %}
 
 {% block content %}
-	Accueil content
 	
-{% endblock %}
-
 <div id="home-articles">
 
+	{% for article in articles.object_list %}
+
+	    {{ article.title|upper }}<br />
+	    {{ article.text|safe }}<br />
+	    
+	{% endfor %}
+
+	<div class="pagination">
+	    <span class="step-links">
+	        {% if articles.has_previous %}
+	            <a href="?page={{ articles.previous_page_number }}">previous</a>
+	        {% endif %}
+
+	        <span class="current">
+	            Page {{ articles.number }} of {{ articles.paginator.num_pages }}.
+	        </span>
+
+	        {% if articles.has_next %}
+	            <a href="?page={{ articles.next_page_number }}">next</a>
+	        {% endif %}
+	    </span>
+	</div>
 </div>
+
 <div id="home-reservations">
 	{% if messages %}
 		<ul class="messages">
@@ -31,3 +51,5 @@
 	</table>
 	<input type="submit" value="Submit">
 </div>
+
+{% endblock %}
