@@ -57,7 +57,6 @@ def List(request):
 	},context_instance=RequestContext(request))
 
 def Contact(request):
-<<<<<<< HEAD
 	from django.template import loader, Context
 	from django.core.mail import send_mail
 	if request.method == 'POST':
@@ -74,6 +73,3 @@ def Contact(request):
 	return render_to_response("Front/Contact.html",{
 		"form"	: form
 	},context_instance=RequestContext(request))
-=======
-	return render_to_response('Front/Contact.html',{},context_instance=RequestContext(request))
->>>>>>> 8576ee68bf78d6da33f4c90de011c3a5ea7cd363

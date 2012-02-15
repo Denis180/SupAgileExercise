@@ -115,17 +115,40 @@ body {
 }
 
 #content #home-articles {
-	width: 600px;
+	width: 650px;
+	float: left;
 }
 
 #content #home-reservations {
-	width: 350px;
+	width: 240px;
+	float: right;
 }
+
+#content #home-reservations label {
+	display: block;
+	color: #888;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#content #home-reservations input[type="text"] {
+	padding: 4px;
+	font-size: 14px;
+	line-height: 14px;
+	border: 1px solid #ddd;
+	width: 220px;
+	margin-bottom: 20px;
+}
+
+#content #home-reservations select {
+	margin-bottom: 20px;
+}
+
+
 
 .styled_box {
 	padding: 20px;
 	background: rgba(255, 255, 255, 0.75);
-	border-radius: 10px;
 }
 
 #list {
@@ -195,7 +218,7 @@ body {
 	border-spacing: 6px;
 }
 
-#contact #contact_form table td input,
+#contact #contact_form table td input[type="text"],
 #contact #contact_form table td textarea {
 	padding: 8px;
 	font-size: 14px;

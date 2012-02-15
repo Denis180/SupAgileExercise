@@ -24,4 +24,5 @@ urlpatterns = patterns('',
         }),
     (r'^grappelli/', include('grappelli.urls')),
     (r'', include('Front.urls')),
+    (r'', include('Article.urls')),
 )
