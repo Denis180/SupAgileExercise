@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-Accueil content
+	Accueil content
+	{% if messages %}
+		<ul class="messages">
+		    {% for message in messages %}
+		    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		    {% endfor %}
+		</ul>
+	{% endif %}
+	{% if reservation_form.errors %}
+		<p style="color: red;">
+		    Please correct the error{{ form.errors|pluralize }} below.
+		</p>
+	{% endif %}
+	<form id='reservation' action="{{ request.path }}" method="POST">
+    	{% csrf_token %}
+	<table>
+	    {{ reservation_form.as_table }}
+	</table>
+	<input type="submit" value="Submit">
 {% endblock %}

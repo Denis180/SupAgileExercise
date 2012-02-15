@@ -17,7 +17,7 @@ class Item(models.Model):
 		("MEAT", "Viandes"),
 		("DESSERT", "Desserts")
 	)
-	
+
 	category	= models.CharField(max_length = 64, choices = CATEGORIES)
 	name		= models.CharField(max_length = 128)
 	price		= models.DecimalField(max_digits = 5, decimal_places = 2)
