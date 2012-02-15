@@ -156,7 +156,7 @@ msgstr "précédent"
 #: Templates/Front/Home.html:23
 #, python-format
 msgid "Page %(page)s of %(total_page)s"
-msgstr "Page %(page)s sur %(total_page)"
+msgstr "Page %(page)s sur %(total_page)s"
 
 #: Templates/Front/Home.html:27
 msgid "next"
@@ -165,7 +165,7 @@ msgstr "suivant"
 #: Templates/Front/Home.html:43
 #, python-format
 msgid " Please correct the error%(form.errors|pluralize)s below "
-msgstr " Merci de corriger les erreurs"
+msgstr " Merci de corriger les erreur%(form.errors|pluralize)s ci-dessous"
 
 #: Templates/Front/Home.html:49
 msgid "Reserve"
