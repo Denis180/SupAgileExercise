@@ -7,4 +7,5 @@ urlpatterns = patterns('',
 	url(r'^$', views.Home, name="Home"),
 	url(r'^Carte/$', views.List, name="List"),
 	url(r'^Contact/$', views.Contact, name="Contact"),
+	url(r'^AboutUs/$', views.About, name="About"),
 )

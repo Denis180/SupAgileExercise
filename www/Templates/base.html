@@ -23,9 +23,10 @@
 				<div id="title">Le Paradis Fran&ccedil;ais</div>
 			</div>
 			<ul id="menu">
-				<li {% block header-curview-home %}{% endblock %}><a href="{% url Home %}">Accueil</a></li>
-				<li {% block header-curview-list %}{% endblock %}><a href="{% url List %}">Carte</a></li>
-				<li {% block header-curview-contact %}{% endblock %}><a href="{% url Contact %}">Contact</a></li>
+				<li {% block header-curview-home %}{% endblock %}><a href="{% url Home %}">{% trans "Accueil" %}</a></li>
+				<li {% block header-curview-list %}{% endblock %}><a href="{% url List %}">{% trans "Carte" %}</a></li>
+				<li {% block header-curview-contact %}{% endblock %}><a href="{% url Contact %}">{% trans "Contact" %}</a></li>
+				<li {% block header-curview-info %}{% endblock %}><a href="{% url About %}">{% trans "About Us" %}</a></li>
 			</ul>
            
 		{% endblock %}
