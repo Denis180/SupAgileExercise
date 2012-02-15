@@ -39,6 +39,9 @@ def Home(request):
 			for reservation in Reservation.objects.filter(date = data['date'], time = data['time']):
 				table_disp -= reservation.table_numbers
 
+			if form.cleaned_data['numbers'] >= 15:
+				messages.error(request, _(u"Contact us for group reservation (from 15 persons)"))
+				return render_to_response('Front/Home.html', {"reservation_form" : form, "articles": articles},context_instance=RequestContext(request))
 			temp = float(request.POST['numbers'])/float(PERSON_ON_TABLE)
 			table_need = int(math.ceil(temp))
 
