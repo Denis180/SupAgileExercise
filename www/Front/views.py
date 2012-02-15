@@ -43,12 +43,17 @@ def Home(request):
 	return render_to_response('Front/Home.html', {"reservation_form" : form},context_instance=RequestContext(request))
 
 def List(request):
-	entrees		= Item.objects.filter(category = "START")
-	viandes		= Item.objects.filter(category = "MEAT")
-	desserts	= Item.objects.filter(category = "DESSERT")
+	menus		= Menu.objects.all()
+	starters	= Course.objects.filter(category = "STARTER")
+	meats		= Course.objects.filter(category = "MEAT")
+	desserts	= Course.objects.filter(category = "DESSERT")
 
 	return render_to_response('Front/List.html',{
-		"entrees"	: entrees,
-		"viandes"	: viandes,
+		"menus"		: menus,
+		"starters"	: starters,
+		"meats"		: meats,
 		"desserts"	: desserts
-	}, context_instance=RequestContext(request))
+	},context_instance=RequestContext(request))
+
+def Contact(request):
+	return render_to_response('Front/Contact.html',{},context_instance=RequestContext(request))

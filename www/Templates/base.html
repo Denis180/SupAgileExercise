@@ -1,9 +1,11 @@
+{% load i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-		<title>{% block title %}Le paradis français{% endblock %}</title>
-   
+		<title>{% block title %}Le Paradis français{% endblock %}</title>
+   		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />
+   		<script type="text/javascript" src="{{ STATIC_URL}}js/jquery-1.7.1.min.js"></script>
 
 		{% block include %}
 		
@@ -17,10 +19,13 @@
 	<body>
 		<div id="header">
 		{% block header %}
+			<div id="banner">
+				<div id="title">Le Paradis Fran&ccedil;ais</div>
+			</div>
 			<ul id="menu">
-				<li><a href="#">Accueil</a></li>
-				<li><a href="{% url List %}">Carte</a></li>
-				<li><a href="#">Contact</a></li>
+				<li {% block header-curview-home %}{% endblock %}><a href="{% url Home %}">Accueil</a></li>
+				<li {% block header-curview-list %}{% endblock %}><a href="{% url List %}">Carte</a></li>
+				<li {% block header-curview-contact %}{% endblock %}><a href="{% url Contact %}">Contact</a></li>
 			</ul>
 		{% endblock %}
 		</div>

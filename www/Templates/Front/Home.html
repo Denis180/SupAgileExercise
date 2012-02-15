@@ -1,7 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
+
+{% block header-curview-home %}class="selected"{% endblock %}
 
 {% block content %}
 	Accueil content
+	
+{% endblock %}
+
+<div id="home-articles">
+
+</div>
+<div id="home-reservations">
 	{% if messages %}
 		<ul class="messages">
 		    {% for message in messages %}
@@ -20,4 +30,6 @@
 	    {{ reservation_form.as_table }}
 	</table>
 	<input type="submit" value="Submit">
+</div>
 {% endblock %}
+
